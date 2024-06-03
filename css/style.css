@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* === General CSS === */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Variables */
+:root { 
+    --color-black: black;
+    --color-white: white;
+    --color-accent-1 : #00470f;
+    --color-accent-2 : #CEE4B5;
+    --ff : "Inter", Sans-Serif;
+}
+/* Body and headings */
+body {
+ background-color: var(--color-white);
+ font-size: 15px;
+ font-family: var(--ff);
+}
+h1 {
+    font-size: 44.79px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+h2{
+    font-size: 37.32px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+h3 {
+    font-size: 31.1px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+p {
+    line-height: 1.6;
+}
+.section-padding {
+    padding-top: 80px;
+ }
+/* Main btn */
+.main-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-accent-1);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+  /* Hover effect */
+  .main-btn:hover {
+    background-color:var(--color-black);
+    scale: 1.05;
+  }
+
+/* Nav Menu */
+.navbrandSvg {
+    height: 50px;
+    width: 50px;
+    padding-right: 8px;
+    fill: var(--color-accent-1);
+}
+.navbrandSvg:hover{
+    scale: 1.05;
+}
+#navbarNav .navbar-nav .nav-link {
+    color: var(--color-black);
+    transition: color 0s ease;
+}
+#navbarNav .navbar-nav .nav-link:hover {
+   color: var(--color-accent-2);
+   font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(../images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+ }
+  /* Overlay */
+  .hero::after { 
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgb(42, 39, 42,0.5);
+    z-index: -1;
+  }
+/* Category */
+.category-card img {
+    /* To make an image round it should be rectangle, if not rectangle then assign same height and width, and use bootstrap rounded-circle.*/
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* This line prevents stretching of image or being oval.*/
+} 
+/* Featured Dishes */
+.feature-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+/* Newsletter */
+.newsletter {
+    background-color: var(--color-accent-2);
+}
+.newsletter h2 {
+    font-weight: bold;
+}
+.newsletter .email-block {
+    width: 60%;
+    margin: auto;
+}
+/* Contact */
+.contact-right {
+    background-color: var(--color-accent-2);
+}
+.contact-right h2 {
+    color: var(--color-accent-1);
+    font-weight: bold;
+    padding-top: 40%;
+}
+
+/* footer */
+.footer h5 {
+    font-weight: bold;
+    color: var(--color-white);
+}
+.footer p {
+    color: var(--color-white);
+    line-height: 1.6;
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+.footer ul li {
+    color: var(--color-white);
+    line-height: 2.5;
+}
+.footer ul li a {
+    text-decoration: none;
+    color: var(--color-white);
+    line-height: 2.5;
+}
+.footer ul li a:hover {
+    color: var(--color-accent-2);
+}
+#basic-addon2 {
+    background: var(--color-accent-1);
+    color: var(--color-white);
+}
+.footer .socials-svg {
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+}
+.footer .socials-svg:hover {
+    fill: var(--color-accent-2);
+}
+.copyright {
+    background-color: var(--color-black);
+}
