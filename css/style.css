@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* === General CSS === */
+/* ====== General CSS ====== */
 
-* {
+*, form {
     margin: 0;
     padding: 0;
 }
@@ -12,31 +12,41 @@
     --color-white: white;
     --color-accent-1 : #00470f;
     --color-accent-2 : #CEE4B5;
+    --color-grey: #808080;
     --ff : "Inter", Sans-Serif;
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 /* Body and headings */
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
 body {
  background-color: var(--color-white);
- font-size: 15px;
  font-family: var(--ff);
 }
 h1 {
-    font-size: 44.79px;
-    font-weight: bold;
-    line-height: 1.4;
+font-size: 2.986rem;
+line-height: 1.4;
+font-weight: 300;
 }
 h2{
-    font-size: 37.32px;
+    font-size: 2.488rem;
     line-height: 1.4;
     font-weight: bold;
 }
 h3 {
-    font-size: 31.1px;
+    font-size: 2.074rem;
     font-weight: 500;
     line-height: 1.4;
 }
+h5 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
 p {
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 .section-padding {
     padding-top: 80px;
@@ -49,14 +59,18 @@ p {
     color: #fff;
     text-decoration: none;
     border: none;
+    border-radius: 25px;
     transition: background-color 0.2s ease;
+    font-size: 1rem;
   }
   /* Hover effect */
   .main-btn:hover {
     background-color:var(--color-black);
     scale: 1.05;
   }
-
+ 
+/* ====== Layouts CSS ======*/                          /* < ------ > */
+/* === Header ===*/
 /* Nav Menu */
 .navbrandSvg {
     height: 50px;
@@ -77,8 +91,8 @@ p {
 }
 
 /* Hero Section */
-.hero {
-    background-image: url(../images/hero-bg.jpg);
+#hero {
+    background-image: url(../images/hero-bg-l.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -92,80 +106,285 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    background-color:rgb(42, 39, 42,0.5);
+    background: linear-gradient(90deg, hsla(133, 100%, 14%, 0.4) 0%, hsla(140, 60%, 82%, 0.6) 49%, hsla(88, 47%, 80%, 0.4) 100%);
     z-index: -1;
   }
-/* Category */
+
+/* === Category Section === */
 .category-card img {
-    /* To make an image round it should be rectangle, if not rectangle then assign same height and width, and use bootstrap rounded-circle.*/
+    /* To make an image round it should be rectangle, if not rectangle then assign same height and width, 
+    and use bootstrap rounded-circle.*/
     width: 150px;
     height: 150px;
-    object-fit: cover; /* This line prevents stretching of image or being oval.*/
+    /* This line prevents stretching of image or being oval.*/
+    object-fit: cover; 
 } 
-/* Featured Dishes */
+/* Featured Dishes Section */
 .feature-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
-/* Newsletter */
+.feature-card {
+    box-shadow: var(--box-shadow);
+}
+
+/* === Newsletter Section === */
 .newsletter {
     background-color: var(--color-accent-2);
 }
 .newsletter h2 {
     font-weight: bold;
 }
-.newsletter .email-block {
-    width: 60%;
-    margin: auto;
-}
-/* Contact */
-.contact-right {
-    background-color: var(--color-accent-2);
-}
-.contact-right h2 {
+.newsletter span {
     color: var(--color-accent-1);
-    font-weight: bold;
-    padding-top: 40%;
+}
+.newsletter .email-block {
+    width: 70%;
+    margin: auto;}
+    /* newsletter block width below 768px responsive */
+    @media (max-width: 768px){
+       .newsletter .email-block {
+            width: 100%;
+        }
+    }
+
+/* === About Section === */
+#about img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-/* footer */
-.footer h5 {
+/* === Contact Section === */
+#contact {
+    padding-bottom: 80px;
+} 
+.form-area .main-btn {
+    width: 100%;
+}
+
+/* === footer === */
+#footer {
+    background-color: var(--color-black);
+}
+#footer h5 {
     font-weight: bold;
     color: var(--color-white);
 }
-.footer p {
-    color: var(--color-white);
-    line-height: 1.6;
+#footer p {
+    color: var(--color-grey);
+    line-height: 1.4;
+    font-size: 13px;
 }
-.footer ul {
+#footer ul {
     list-style: none;
     padding: 0;
 }
-.footer ul li {
-    color: var(--color-white);
+#footer ul li {
+    color: var(--color-grey);
     line-height: 2.5;
+    font-size: 0.85rem;
 }
-.footer ul li a {
+#footer ul li a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-grey);
     line-height: 2.5;
+    font-size: 0.85rem;
 }
-.footer ul li a:hover {
+#footer ul li a:hover {
     color: var(--color-accent-2);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-2);
 }
 #basic-addon2 {
     background: var(--color-accent-1);
-    color: var(--color-white);
+    color: var(--color-grey);
 }
-.footer .socials-svg {
+#footer .socials-svg {
     height: 25px;
     width: 25px;
     margin-right: 15px;
+    fill: var(--color-grey);
 }
-.footer .socials-svg:hover {
+#footer .socials-svg:hover {
     fill: var(--color-accent-2);
 }
-.copyright {
-    background-color: var(--color-black);
+#footer hr {
+    hr {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: var(--color-accent-2);
+    }
+}
+
+/* ====== Responsive CSS ======= */ 
+@media (min-width:320px) and (max-width:567px) {
+    /* == main-btn == */
+        .main-btn{
+            font-size: 0.8rem;
+        }
+    /* == Headings == */
+        h1 {
+            font-size: 2.25rem;
+            }
+        h2{
+            font-size: 1.7rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+        }
+        h5 {
+            font-size: 1rem;  
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    /* == Category section == */
+    /* Adjusted image size*/
+        .category-card img {
+            width: 110px; 
+            height: 110px;
+            object-fit: cover;
+        } 
+     /* == Feature Section == */
+        /* Change image height to reduce card height */
+        .feature-card img { 
+            height: 160px;
+            object-fit: cover;
+        }
+        /* add space between cards*/
+        .feature-card {
+            margin-top: 26px;
+        }
+         /* == About Section == */
+         #about img { /* image height*/
+            height: 250px;
+            padding-top: 20px;
+        }
+        #about {
+            text-align: center;
+        }
+
+}
+
+@media (min-width:568px) and (max-width:768px) {
+    /* == main-btn == */
+        .main-btn{
+            font-size: 0.8rem;
+        }
+    /* == Headings == */
+        h1 {
+            font-size: 2.25rem;
+            }
+        h2{
+            font-size: 1.7rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        h5 {
+            font-size: 1.1rem;  
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    /* == Category section == */
+        /* Adjusted image size*/
+        .category-card img {
+            width: 110px; 
+            height: 110px;
+            object-fit: cover;
+        } 
+  
+    /* == Feature Section == */
+        /* Change image height to reduce card height */
+        .feature-card img { 
+            height: 160px;
+            object-fit: cover;
+        }
+        /* add space between cards*/
+        .feature-card {
+            margin-top: 26px;
+        }
+    /* == About Section == */
+        #about img { /* image height*/
+            height: 280px;
+            padding-top: 20px;
+        }
+        #about {
+            text-align: center;
+        }
+}
+
+@media (min-width:769px) and (max-width:992px) { /* medium screen sizes */
+    /* == main-btn == */
+        .main-btn{
+            font-size: 0.8rem;
+        }
+    /* == Headings == */
+        h1 {
+            font-size: 2.35rem;
+            }
+        h2{
+            font-size: 2.1rem;
+        }
+        h3 {
+            font-size: 1.674rem;
+        }
+        h5 {
+            font-size: 1.1rem;  
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    
+    /* Category section */
+    .category-card img {
+      width: 120px; /* Adjusted image size*/
+      height: 120px;
+      object-fit: cover;
+    } 
+
+    /* Feature Section*/
+    .feature-card img { /* Change image height to reduce card height */
+        height: 180px;
+        object-fit: cover;
+    }
+    .feature-card {
+        /* add space between cards*/
+        margin-top: 26px;
+    }
+
+    /* About Section*/
+        #about img { /* image height*/
+            height: 350px;
+        }
+}
+
+@media (min-width:993px) and (max-width:1199px) {
+    /* headings */
+    h1 {
+        font-size: 2.586rem;
+        }
+        h2{
+            font-size: 2.288rem;
+        }
+        h3 {
+            font-size: 1.874rem;
+        }
+        h5 {
+            font-size: 1.2rem;  
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    /* contact section */
+    .contact-right li {
+        font-size: 0.8rem;
+    }
+    /* About Section*/
+    #about img { /* image height*/
+       height: 300px;
+    }
 }
