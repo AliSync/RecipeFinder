@@ -4,6 +4,7 @@
 /* ====== General CSS ====== */
 
 *, form {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -15,26 +16,23 @@
     --color-accent-2 : #CEE4B5;
     --color-grey: #808080;
     --ff : "Poppins", Sans-Serif;
-    --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 /* Body and headings */
-html {
-    font-size: 100%;
-    box-sizing: border-box;
-}
 body {
- background-color: var(--color-white);
- font-family: var(--ff);
+    font-size: 16px;
+    background-color: var(--color-white);
+    font-family: var(--ff);
 }
 h1 {
-font-size: 2.986rem;
-line-height: 1.4;
-font-weight: 300;
+    font-size: 2.986rem;
+    line-height: 1.2;
+    font-weight: 300;
 }
 h2{
     font-size: 2.488rem;
-    line-height: 1.4;
-    font-weight: bold;
+    line-height: 1.2;
+    font-weight: 700;
 }
 h3 {
     font-size: 2.074rem;
@@ -43,14 +41,14 @@ h3 {
 }
 h5 {
     font-size: 1.4rem;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 p {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 .section-padding {
-    padding-top: 80px;
+    padding-top: 120px;
  }
 /* Main btn */
 .main-btn {
@@ -60,17 +58,16 @@ p {
     color: #fff;
     text-decoration: none;
     border: none;
-    border-radius: 25px;
+    border-radius: 24px;
     transition: background-color 0.2s ease;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   /* Hover effect */
   .main-btn:hover {
     background-color:var(--color-black);
     scale: 1.05;
   }
- 
-/* ====== Layouts CSS ======*/                          /* < ------ > */
+/* ====== Layouts CSS ======*/ 
 /* === Header ===*/
 /* Nav Menu */
 .navbrandSvg {
@@ -175,8 +172,8 @@ p {
 }
 #footer p {
     color: var(--color-grey);
-    line-height: 1.4;
-    font-size: 13px;
+    line-height: 1.6;  
+    font-size: 0.75rem;
 }
 #footer ul {
     list-style: none;
@@ -184,14 +181,14 @@ p {
 }
 #footer ul li {
     color: var(--color-grey);
-    line-height: 2.5;
-    font-size: 0.85rem;
+    line-height: 2.4;
+    font-size: 0.75rem;
 }
 #footer ul li a {
     text-decoration: none;
     color: var(--color-grey);
-    line-height: 2.5;
-    font-size: 0.85rem;
+    line-height: 2.4;
+    font-size: 0.75rem;
 }
 #footer ul li a:hover {
     color: var(--color-accent-2);
